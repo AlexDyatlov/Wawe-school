@@ -1,5 +1,13 @@
-// COLORS
 :root {
   --color-black: #000;
   --color-white: #fff;
+  --color-main: #242121;
+  --color-firefly: #0d302c;
+  --color-cyprus: #01353e;
+  --color-persian: #00b2a0;
+
+  // шрифты
+  --font-raleway: "raleway", sans-serif;
+  --font-condensed: "Roboto Condensed", sans-serif;
+  --normal-font: 400 24px / 28px var(--font-condensed);
 }

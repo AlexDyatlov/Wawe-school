@@ -11,6 +11,8 @@ html {
 body {
   margin: 0;
   font-family: "asd", sans-serif;
+  letter-spacing: 0.6px;
+  color: var(--color-main);
   background-color: var(--color-white);
 }
 
@@ -63,9 +65,15 @@ button {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1200px;
+  max-width: 1230px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: var(--grid-gap);
 }
