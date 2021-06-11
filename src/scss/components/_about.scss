@@ -1,0 +1,22 @@
+.about {
+  padding: 189px 0 199px;
+
+  &__title {
+    margin-bottom: 100px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 87px);
+    max-width: 1080px;
+    gap: 30px 120px;
+  }
+
+  &__text {
+    margin: 0;
+    width: 100%;
+    max-width: 480px;
+    font: var(--light-font);
+  }
+}

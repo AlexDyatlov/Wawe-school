@@ -5,9 +5,12 @@
   --color-firefly: #0d302c;
   --color-cyprus: #01353e;
   --color-persian: #00b2a0;
+  --color-alabaster: #f8f8f8;
 
   // шрифты
   --font-raleway: "raleway", sans-serif;
   --font-condensed: "Roboto Condensed", sans-serif;
+  --light-font: 300 14px / 18px var(--font-condensed);
   --normal-font: 400 24px / 28px var(--font-condensed);
+  --semibold-font: 600 48px / 56px var(--font-raleway);
 }

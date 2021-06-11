@@ -77,3 +77,18 @@ button {
   grid-template-columns: repeat(16, 1fr);
   gap: var(--grid-gap);
 }
+
+.title {
+  position: relative;
+  margin: 0;
+  font: var(--semibold-font);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-cyprus);
+
+  svg {
+    position: absolute;
+    width: 48px;
+    height: 85px;
+  }
+}
