@@ -1,0 +1,26 @@
+.quote {
+  padding: 80px 0 62px;
+  background-color: var(--color-alabaster);
+
+  &__descr {
+    margin: 0 auto;
+    max-width: 870px;
+    text-align: center;
+  }
+
+  &__about {
+    font: var(--italic-font);
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+
+  &__author {
+    display: block;
+    font: var(--light-font);
+    font-style: italic;
+    text-align: right;
+  }
+}
