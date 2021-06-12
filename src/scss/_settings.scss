@@ -96,3 +96,19 @@ button {
     height: 85px;
   }
 }
+
+.btn {
+  border: 1px solid var(--color-silver);
+  padding: 25px 91px;
+  font: var(--normal-font);
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--color-main);
+  background-color: var(--color-white);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-alabaster);
+  }
+}
