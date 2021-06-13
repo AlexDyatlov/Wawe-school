@@ -1,0 +1,51 @@
+.show {
+  padding: 203px 0 200px;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 50%;
+  width: 100%;
+  height: 0;
+  background-color: var(--color-black);
+
+  &__media {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: none;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #373a39;
+      object-fit: cover;
+      transition: fill 0.3s ease-in-out;
+    }
+  }
+}
+
+.video:hover .video__button svg,
+.video__button:focus svg {
+  fill: var(--color-white);
+}
+
+.video--enabled {
+  cursor: pointer;
+
+  .video__button {
+    display: block;
+  }
+}

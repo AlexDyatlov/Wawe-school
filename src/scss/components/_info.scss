@@ -1,0 +1,24 @@
+.info {
+  padding-bottom: 198px;
+
+  &__items {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    font: var(--bold-font);
+    text-align: center;
+    color: var(--color-cyprus);
+
+    &:not(:last-child) {
+      margin-right: 100px;
+    }
+  }
+
+  &__text {
+    display: block;
+    margin-top: 5px;
+    font: var(--light-font);
+  }
+}
