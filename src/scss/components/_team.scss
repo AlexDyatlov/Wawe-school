@@ -1,0 +1,41 @@
+.teams {
+  padding-bottom: 204px;
+
+  &__title {
+    margin-bottom: 212px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.team {
+  width: 100%;
+  max-width: 330px;
+  text-align: center;
+
+  &__avatar {
+    min-height: 450px;
+    background: center/cover no-repeat;
+  }
+
+  &__name {
+    margin: 25px 0 1px;
+    font: var(--bold-font);
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  &__descr {
+    margin: 0;
+    font: var(--normal-font);
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 105px;
+  }
+}

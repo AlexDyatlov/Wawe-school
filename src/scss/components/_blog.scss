@@ -7,6 +7,7 @@
 
   &__slider {
     position: relative;
+    cursor: grab;
   }
 }
 
@@ -57,10 +58,16 @@
     height: 15px;
     background-color: var(--color-white);
     opacity: 1;
+    transition: background-color 0.2s;
 
     &-active {
       background-color: var(--color-persian);
       opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-persian);
     }
   }
 }

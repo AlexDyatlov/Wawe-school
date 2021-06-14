@@ -1,0 +1,64 @@
+.service-packages {
+  padding: 200px 0;
+  background-color: var(--color-alabaster);
+
+  &__title {
+    margin-bottom: 216px;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 31px;
+  width: 100%;
+  min-height: 577px;
+  max-width: 360px;
+  color: var(--color-cyprus);
+  background-color: var(--color-white);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 60px;
+    font: var(--normal-font);
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 20px;
+    font: var(--normal-font);
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-main);
+  }
+
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+    font: var(--normal-font);
+    font-size: 36px;
+    line-height: 40px;
+
+    &--currency {
+      position: relative;
+      left: 5px;
+      bottom: 8px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &:not(:last-child) {
+    margin-right: 60px;
+  }
+}

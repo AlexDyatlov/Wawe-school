@@ -2,7 +2,7 @@
   padding-bottom: 200px;
 
   &__title {
-    margin-bottom: 212px;
+    margin-bottom: 220px;
   }
 
   &__list {
@@ -12,7 +12,7 @@
 
   &__item {
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 26px;
     }
   }
 
@@ -37,7 +37,7 @@
     grid-auto-flow: dense;
     grid-auto-rows: 280px;
     grid-template-columns: 20.834% 24.167% 24.167% 20.834%;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     gap: 40px 3.3%;
   }
 

@@ -1,5 +1,5 @@
 .program {
-  padding: 200px 0;
+  padding: 197px 0;
   background-color: var(--color-alabaster);
 
   &__title {
@@ -16,8 +16,8 @@
     max-width: 600px;
     font: var(--light-font);
 
-    & + & {
-      margin-top: 30px;
+    &:not(:last-child) {
+      margin-bottom: 32px;
     }
   }
 }
@@ -25,7 +25,7 @@
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 102px;
+  margin-bottom: 97px;
 
   &__item {
     width: 100%;
@@ -62,7 +62,7 @@
   max-width: 346px;
 
   &__item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
   }
 
   &__box {
