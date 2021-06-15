@@ -8,6 +8,17 @@
   &__inner {
     display: flex;
     justify-content: center;
+
+    @include tablet {
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+    }
   }
 }
 
@@ -36,6 +47,19 @@
   }
 
   &:not(:last-child) {
-    margin-right: 105px;
+    margin-right: 8.75%;
+
+    @include tablet {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+  @include tablet {
+    margin: 0 15px;
+  }
+
+  @include small-tablet {
+    margin: 0;
   }
 }

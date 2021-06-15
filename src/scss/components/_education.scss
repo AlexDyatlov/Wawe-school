@@ -9,11 +9,10 @@
 }
 
 .school {
-  padding: 200px 0 30px;
+  padding: 200px 89px 0 0;
 
   &__title {
     margin-bottom: 100px;
-    text-align: left;
   }
 
   &__descr {
@@ -24,15 +23,22 @@
       margin-bottom: 30px;
     }
   }
+
+  @include tablet {
+    padding: 200px 40px 0 0;
+  }
+
+  @include small-tablet {
+    padding: 200px 0 30px;
+  }
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .education {
     display: flex;
   }
 
   .school {
-    padding: 200px 89px 0 0;
     width: 50%;
   }
 

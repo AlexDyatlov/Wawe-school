@@ -5,10 +5,32 @@
     margin-bottom: 220px;
   }
 
-  &__list {
-    display: flex;
+  &__inner {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-auto-rows: 280px;
+    grid-template-columns: 20.834% 24.167% 24.167% 20.834%;
     margin-bottom: 50px;
+    gap: 40px 3.3%;
+
+    @include small-tablet {
+      grid-template-columns: 32.834% 27.167% 32.834%;
+    }
+
+    @include mobile {
+      grid-template-columns: 100%;
+    }
   }
+
+  &__more {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.sorting {
+  display: flex;
+  margin-bottom: 50px;
 
   &__item {
     &:not(:last-child) {
@@ -18,32 +40,23 @@
 
   &__btn {
     font: var(--normal-font);
-    line-height: 18px;
     text-transform: uppercase;
     transition: color 0.3s ease-in-out;
-
-    &:hover,
-    &:focus {
-      color: var(--color-persian);
-    }
 
     &.mixitup-control-active {
       color: var(--color-persian);
     }
+
+    @include desktop {
+      &:hover,
+      &:focus {
+        color: var(--color-persian);
+      }
+    }
   }
 
-  &__inner {
-    display: grid;
-    grid-auto-flow: dense;
-    grid-auto-rows: 280px;
-    grid-template-columns: 20.834% 24.167% 24.167% 20.834%;
-    margin-bottom: 50px;
-    gap: 40px 3.3%;
-  }
-
-  &__more {
-    display: block;
-    margin: 0 auto;
+  @include small-tablet {
+    overflow-x: auto;
   }
 }
 
@@ -56,5 +69,14 @@
 
   &--large {
     grid-column: span 2;
+
+    @include small-tablet {
+      order: -1;
+      grid-column: span 3;
+    }
+
+    @include mobile {
+      grid-column: span 1;
+    }
   }
 }

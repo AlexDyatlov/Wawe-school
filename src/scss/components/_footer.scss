@@ -1,17 +1,34 @@
 .footer {
   &__title {
     margin-bottom: 242px;
+
+    @include tablet {
+      margin-bottom: 140px;
+    }
   }
 
   &__inner {
     display: flex;
     justify-content: space-between;
     margin-bottom: 203px;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__form {
     width: 100%;
-    max-width: 569px;
+    max-width: 47.417%;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+
+    @include small-tablet {
+      max-width: 100%;
+    }
   }
 
   &__copy {
@@ -20,6 +37,10 @@
 
     .logo {
       margin: 0 auto;
+    }
+
+    @include small-tablet {
+      padding: 45px 0;
     }
   }
 }
@@ -59,12 +80,18 @@
       max-width: 260px;
     }
   }
+
+  @include small-tablet {
+    &__btn {
+      width: 100%;
+    }
+  }
 }
 
 .contacts {
-  padding: 49px 221px 71px 52px;
+  padding: 49px 159px 71px 52px;
   width: 100%;
-  max-width: 600px;
+  max-width: 50%;
   background-color: var(--color-alabaster);
 
   &__text {
@@ -75,6 +102,11 @@
     &:not(:last-child) {
       margin-bottom: 65px;
     }
+
+    @include mobile {
+      font-size: 19px;
+      line-height: 23px;
+    }
   }
 
   &__phone {
@@ -84,10 +116,21 @@
       color: var(--color-main);
       transition: color 0.3s;
 
-      &:hover {
-        color: var(--color-persian);
+      @include desktop {
+        &:hover {
+          color: var(--color-persian);
+        }
       }
     }
+  }
+
+  @include tablet {
+    padding: 49px 52px 71px;
+    max-width: 100%;
+  }
+
+  @include mobile {
+    padding: 49px 15px 71px;
   }
 }
 
@@ -98,6 +141,11 @@
 
   &__item:not(:last-child) {
     margin-right: 15px;
+
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 45px;
+    }
   }
 
   &__link {
@@ -107,8 +155,16 @@
     color: var(--color-main);
     transition: color 0.3s;
 
-    &:hover {
-      color: var(--color-persian);
+    @include desktop {
+      &:hover,
+      &:focus {
+        color: var(--color-persian);
+      }
     }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
   }
 }

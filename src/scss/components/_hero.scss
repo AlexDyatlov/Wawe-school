@@ -21,12 +21,32 @@
     text-transform: uppercase;
     color: var(--color-firefly);
     user-select: none;
+
+    @include tablet {
+      padding-left: 0;
+    }
+
+    @include small-tablet {
+      font-size: 120px;
+      line-height: 140px;
+    }
+
+    @include mobile {
+      font-size: 75px;
+      line-height: 95px;
+    }
   }
 
   &__descr {
     margin: 0;
     font: var(--normal-font);
     color: var(--color-black);
+
+    @include mobile {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
   }
 
   &__btn {
@@ -44,16 +64,19 @@
       transition: fill 0.3s;
     }
 
-    &:hover {
-      svg {
-        fill: var(--color-persian);
-      }
-    }
-
     &--moving {
       animation-name: moving;
       animation-duration: 1.5s;
       animation-iteration-count: infinite;
+    }
+
+    @include desktop {
+      &:hover,
+      &:focus {
+        svg {
+          fill: var(--color-persian);
+        }
+      }
     }
   }
 }
