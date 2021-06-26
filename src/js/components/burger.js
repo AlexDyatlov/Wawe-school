@@ -1,7 +1,7 @@
 const burgerBtn = document.querySelector('.burger'),
-      menu = document.querySelector('.menu');
+      menuList = document.querySelector('.menu__list');
 
 burgerBtn.addEventListener('click', function(){
   burgerBtn.classList.toggle('active');
-  menu.classList.toggle('menu--visible');
+  menuList.classList.toggle('menu__list--visible');
 });

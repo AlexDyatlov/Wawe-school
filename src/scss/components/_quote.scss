@@ -1,20 +1,13 @@
 .quote {
-  padding: 78px 0 62px;
+  margin: 0;
+  padding: 78px 15px 62px;
+  font: var(--italic-font);
+  text-align: center;
   background-color: var(--color-alabaster);
 
-  &__descr {
+  p {
     margin: 0 auto;
     max-width: 870px;
-    text-align: center;
-  }
-
-  &__about {
-    font: var(--italic-font);
-
-    &::before,
-    &::after {
-      display: none;
-    }
 
     @include small-tablet {
       font-size: 24px;
@@ -37,5 +30,13 @@
       font-size: 12px;
       line-height: 16px;
     }
+  }
+
+  @include tablet {
+    padding: 60px 15px;
+  }
+
+  @include mobile {
+    padding: 40px 15px;
   }
 }

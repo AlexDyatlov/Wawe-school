@@ -5,6 +5,14 @@
     @include tablet {
       margin-bottom: 140px;
     }
+
+    @include small-tablet {
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
 
   &__inner {
@@ -13,8 +21,16 @@
     margin-bottom: 203px;
 
     @include tablet {
+      margin-bottom: 140px;
+    }
+
+    @include small-tablet {
       flex-direction: column;
       align-items: center;
+    }
+
+    @include mobile {
+      margin-bottom: 65px;
     }
   }
 
@@ -22,12 +38,9 @@
     width: 100%;
     max-width: 47.417%;
 
-    @include tablet {
-      margin-bottom: 40px;
-    }
-
     @include small-tablet {
-      max-width: 100%;
+      margin-bottom: 40px;
+      max-width: 569px;
     }
   }
 
@@ -37,10 +50,19 @@
 
     .logo {
       margin: 0 auto;
+
+      @include small-tablet {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    @include tablet {
+      padding: 35px 0;
     }
 
     @include small-tablet {
-      padding: 45px 0;
+      padding: 15px 0;
     }
   }
 }
@@ -55,12 +77,10 @@
     padding-bottom: 20px;
     width: 100%;
     height: 38px;
-    font: var(--normal-font);
     font-size: 18px;
     line-height: 18px;
 
     &::placeholder {
-      font: var(--normal-font);
       font-size: 18px;
       line-height: 18px;
       color: var(--color-persian);
@@ -68,6 +88,14 @@
 
     &:focus {
       border-bottom: 2px solid var(--color-black);
+    }
+  }
+
+  &__btn {
+    padding: 25px 114px;
+
+    @include mobile {
+      padding: 20px 15px;
     }
   }
 
@@ -80,57 +108,48 @@
       max-width: 260px;
     }
   }
-
-  @include small-tablet {
-    &__btn {
-      width: 100%;
-    }
-  }
 }
 
 .contacts {
-  padding: 49px 159px 71px 52px;
+  padding: 49px 52px 71px;
   width: 100%;
   max-width: 50%;
   background-color: var(--color-alabaster);
 
   &__text {
-    margin: 0;
-    font: var(--normal-font);
-    line-height: 30px;
+    font-style: normal;
 
     &:not(:last-child) {
       margin-bottom: 65px;
+
+      @include mobile {
+        margin-bottom: 45px;
+      }
     }
 
     @include mobile {
       font-size: 19px;
-      line-height: 23px;
     }
   }
 
   &__phone {
-    display: block;
+    color: var(--color-main);
+    transition: color 0.3s;
 
-    &--call {
-      color: var(--color-main);
-      transition: color 0.3s;
-
-      @include desktop {
-        &:hover {
-          color: var(--color-persian);
-        }
+    @include desktop {
+      &:hover {
+        color: var(--color-persian);
       }
     }
   }
 
   @include tablet {
-    padding: 49px 52px 71px;
-    max-width: 100%;
+    padding: 49px 10px 71px 30px;
   }
 
-  @include mobile {
-    padding: 49px 15px 71px;
+  @include small-tablet {
+    padding: 30px 15px;
+    max-width: 600px;
   }
 }
 
@@ -144,12 +163,11 @@
 
     @include mobile {
       margin-right: 0;
-      margin-bottom: 45px;
+      margin-bottom: 20px;
     }
   }
 
   &__link {
-    font: var(--normal-font);
     line-height: 18px;
     text-transform: uppercase;
     color: var(--color-main);
@@ -163,8 +181,16 @@
     }
   }
 
+  @include tablet {
+    margin-bottom: 140px;
+  }
+
   @include mobile {
     flex-direction: column;
     align-items: center;
+  }
+
+  @include mobile {
+    margin-bottom: 65px;
   }
 }

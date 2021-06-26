@@ -2,10 +2,6 @@
   padding: 197px 0;
   background-color: var(--color-alabaster);
 
-  &__title {
-    margin-bottom: 100px;
-  }
-
   &__info {
     display: flex;
     justify-content: space-between;
@@ -15,19 +11,25 @@
     }
   }
 
-  &__text {
-    margin: 0;
+  &__description {
     max-width: 600px;
     font: var(--light-font);
 
-    &:not(:last-child) {
+    p:not(:last-child) {
       margin-bottom: 32px;
     }
+  }
 
-    @include tablet {
-      order: -1;
-      max-width: 100%;
-    }
+  @include tablet {
+    padding: 140px 0;
+  }
+
+  @include small-tablet {
+    padding: 90px 0;
+  }
+
+  @include mobile {
+    padding: 65px 0;
   }
 }
 
@@ -56,7 +58,7 @@
     margin-right: 65px;
     height: 56px;
     max-width: 150px;
-    font: var(--normal-font);
+    font-weight: 400;
     text-transform: uppercase;
 
     img {
@@ -78,7 +80,6 @@
   }
 
   &__descr {
-    margin: 0;
     font: var(--light-font);
   }
 
@@ -110,27 +111,24 @@
     margin-right: 10px;
     width: 100%;
     height: 15px;
+    background-image: url("../img/wave.svg");
+    background-size: contain;
     background-repeat: no-repeat;
 
     &--first {
-      background-image: url("../img/wave-1.svg");
+      max-width: 200px;
     }
 
     &--second {
-      background-image: url("../img/wave-2.svg");
-    }
+      max-width: 247px;
 
-    &--third {
-      background-image: url("../img/wave-3.svg");
+      @include mobile {
+        max-width: 227px;
+      }
     }
-  }
-
-  &__percent {
-    font: var(--normal-font);
   }
 
   &__descr {
-    margin: 0;
     font: var(--light-font);
   }
 

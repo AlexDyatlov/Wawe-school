@@ -1,11 +1,11 @@
-.info {
+.indicators {
   padding-bottom: 198px;
 
   &__items {
     display: flex;
     justify-content: center;
 
-    @include small-tablet {
+    @include mobile {
       flex-wrap: wrap;
       margin: -10px 0;
     }
@@ -19,19 +19,19 @@
     &:not(:last-child) {
       margin-right: 8.34%;
 
-      @include small-tablet {
+      @include mobile {
         margin-right: 0;
       }
     }
 
     @include small-tablet {
-      margin: 10px 0;
-      width: 50%;
+      font-size: 46px;
     }
 
     @include mobile {
-      font-size: 46px;
-      line-height: 54px;
+      margin: 10px 0;
+      width: 50%;
+      font-size: 38px;
     }
   }
 
@@ -39,5 +39,17 @@
     display: block;
     margin-top: 5px;
     font: var(--light-font);
+  }
+
+  @include tablet {
+    padding-bottom: 140px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 90px;
+  }
+
+  @include mobile {
+    padding-bottom: 65px;
   }
 }

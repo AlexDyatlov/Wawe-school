@@ -3,16 +3,86 @@
 
   &__title {
     margin-bottom: 229px;
+
+    @include tablet {
+      margin-bottom: 140px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 70px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
   }
 
   &__slider {
     position: relative;
     cursor: grab;
   }
+
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: 15px;
+      height: 15px;
+      background-color: var(--color-white);
+      opacity: 1;
+      transition: background-color 0.2s;
+
+      &-active {
+        background-color: var(--color-persian);
+        opacity: 1;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-persian);
+      }
+
+      @include small-tablet {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+
+  .swiper-container-horizontal {
+    .swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 7.5px;
+
+      @include mobile {
+        margin: 0 4px;
+      }
+    }
+
+    .swiper-pagination-bullets,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+      bottom: 77px;
+      line-height: 0;
+
+      @include tablet {
+        bottom: 40px;
+      }
+    }
+  }
+
+  @include tablet {
+    padding-bottom: 140px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 90px;
+  }
+
+  @include mobile {
+    padding-bottom: 65px;
+  }
 }
 
 .content {
-  min-height: 800px;
+  height: 800px;
   background: center bottom/cover no-repeat;
 
   &::before {
@@ -35,26 +105,32 @@
 
     @include tablet {
       margin-right: 3%;
+      min-height: 480px;
+    }
+
+    @include small-tablet {
+      min-height: 360px;
     }
   }
 
   &__title {
     position: relative;
     margin: 0;
-    font: var(--normal-font);
+    font-weight: 400;
     font-size: 48px;
-    line-height: 56px;
     text-transform: uppercase;
     color: var(--color-white);
 
     @include tablet {
       font-size: 30px;
-      line-height: 38px;
     }
 
     @include small-tablet {
       font-size: 24px;
-      line-height: 32px;
+    }
+
+    @include mobile {
+      font-size: 20px;
     }
   }
 
@@ -64,41 +140,12 @@
     text-transform: initial;
     opacity: 0.7;
   }
-}
 
-.swiper-pagination {
-  .swiper-pagination-bullet {
-    width: 15px;
-    height: 15px;
-    background-color: var(--color-white);
-    opacity: 1;
-    transition: background-color 0.2s;
-
-    &-active {
-      background-color: var(--color-persian);
-      opacity: 1;
-    }
-
-    &:hover,
-    &:focus {
-      background-color: var(--color-persian);
-    }
-  }
-}
-
-.swiper-container-horizontal {
-  .swiper-pagination-bullets .swiper-pagination-bullet {
-    margin: 0 7.5px;
-
-    @include mobile {
-      margin: 0 4px;
-    }
+  @include tablet {
+    height: 480px;
   }
 
-  .swiper-pagination-bullets,
-  .swiper-pagination-custom,
-  .swiper-pagination-fraction {
-    bottom: 77px;
-    line-height: 0;
+  @include small-tablet {
+    height: 360px;
   }
 }

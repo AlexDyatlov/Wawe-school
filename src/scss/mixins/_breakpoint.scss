@@ -1,3 +1,9 @@
+@mixin landscape {
+  @media (max-height: (460px)) {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media (min-width: (1025px)) {
     @content;

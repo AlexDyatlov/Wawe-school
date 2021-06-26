@@ -1,4 +1,5 @@
 .education {
+  display: flex;
   overflow: hidden;
   padding-bottom: 200px;
 
@@ -6,55 +7,76 @@
     display: flex;
     flex: 0 0 100%;
   }
+
+  @include tablet {
+    padding-bottom: 140px;
+  }
+
+  @include small-tablet {
+    display: block;
+    padding-bottom: 90px;
+  }
+
+  @include mobile {
+    padding-bottom: 70px;
+  }
 }
 
 .school {
   padding: 200px 89px 0 0;
+  width: 50%;
 
   &__title {
-    margin-bottom: 100px;
+    text-align: center;
+
+    @include tablet {
+      width: 66%;
+    }
+
+    @include small-tablet {
+      width: auto;
+    }
   }
 
-  &__descr {
-    margin: 0;
+  &__description {
     font: var(--light-font);
 
-    &:not(:last-child) {
+    p:not(:last-child) {
       margin-bottom: 30px;
     }
   }
 
   @include tablet {
-    padding: 200px 40px 0 0;
+    padding: 140px 40px 0 0;
   }
 
   @include small-tablet {
-    padding: 200px 0 30px;
+    padding: 90px 0 30px;
+    width: 100%;
+  }
+
+  @include mobile {
+    padding-top: 65px;
   }
 }
 
-@media (min-width: 768px) {
-  .education {
-    display: flex;
+.surf {
+  position: relative;
+  flex: 0 0 50%;
+  padding: 0 0 44.27%;
+  transform: translate(-100%, 0);
+
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .school {
-    width: 50%;
-  }
-
-  .surf {
-    position: relative;
-    flex: 0 0 50%;
-    padding: 0 0 44.27%;
-    transform: translate(-100%, 0);
-
-    &__img {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+  @include small-tablet {
+    padding: 0 0 56.25%;
+    transform: translate(0);
   }
 }

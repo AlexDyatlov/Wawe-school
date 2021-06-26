@@ -4,6 +4,18 @@
 
   &__title {
     margin-bottom: 216px;
+
+    @include tablet {
+      margin-bottom: 140px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
 
   &__inner {
@@ -12,7 +24,7 @@
 
     @include tablet {
       flex-wrap: wrap;
-      margin: 0 -40px;
+      margin: 0 -15px;
     }
 
     @include small-tablet {
@@ -20,6 +32,18 @@
       align-items: center;
       margin: 0;
     }
+  }
+
+  @include tablet {
+    padding: 140px 0;
+  }
+
+  @include small-tablet {
+    padding: 90px 0;
+  }
+
+  @include mobile {
+    padding: 65px 0;
   }
 }
 
@@ -36,36 +60,47 @@
   &__title {
     margin: 0;
     margin-bottom: 60px;
-    font: var(--normal-font);
+    font-weight: 400;
     font-size: 36px;
-    line-height: 40px;
+    line-height: 1.13;
     text-align: center;
+
+    @include mobile {
+      margin-bottom: 30px;
+      font-size: 24px;
+    }
   }
 
   &__item {
-    margin-bottom: 20px;
-    font: var(--normal-font);
     font-size: 14px;
     line-height: 18px;
     color: var(--color-main);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @include mobile {
+        margin-bottom: 15px;
+      }
+    }
   }
 
   &__price {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: center;
-    margin: 0;
-    height: 100%;
-    font: var(--normal-font);
+    margin-top: auto;
     font-size: 36px;
-    line-height: 40px;
 
-    &--currency {
+    &-currency {
       position: relative;
       left: 5px;
-      bottom: 8px;
       font-size: 18px;
       line-height: 22px;
+    }
+
+    @include mobile {
+      font-size: 24px;
     }
   }
 
@@ -79,7 +114,7 @@
   }
 
   @include tablet {
-    margin: 0 40px;
+    margin: 0 15px;
   }
 
   @include small-tablet {
@@ -87,7 +122,8 @@
   }
 
   @include mobile {
-    padding: 45px 20px;
+    padding: 20px;
+    min-height: 445px;
     max-width: 100%;
   }
 }

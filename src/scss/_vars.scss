@@ -11,9 +11,9 @@
   // шрифты
   --font-raleway: "raleway", sans-serif;
   --font-condensed: "Roboto Condensed", sans-serif;
-  --light-font: 300 14px / 18px var(--font-condensed);
-  --normal-font: 400 24px / 28px var(--font-condensed);
+  --light-font: 300 14px / 1.28 var(--font-condensed);
+  --normal-font: 400 24px / 1.2 var(--font-condensed);
   --italic-font: italic 600 36px / 40px var(--font-condensed);
-  --semibold-font: 600 48px / 56px var(--font-raleway);
-  --bold-font: 700 64px / 75px var(--font-condensed);
+  --semibold-font: 600 48px / 1.17 var(--font-raleway);
+  --bold-font: 700 64px / 1.17 var(--font-condensed);
 }

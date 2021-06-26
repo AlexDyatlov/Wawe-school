@@ -10,7 +10,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "asd", sans-serif;
+  font: var(--normal-font);
   letter-spacing: 0.6px;
   color: var(--color-main);
   background-color: var(--color-white);
@@ -24,35 +24,18 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+}
+
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.is-outer {
-  position: relative !important; // stylelint-disable-line declaration-no-important
-  left: -9999px !important; // stylelint-disable-line declaration-no-important
-}
-
 .site-container {
   overflow: hidden;
-}
-
-.is-hidden {
-  display: none !important; // stylelint-disable-line declaration-no-important
-}
-
-.for-mobile {
-  display: none;
-
-  @include mobile {
-    display: block;
-  }
-}
-
-.error {
-  border: 2px #ff4019 solid !important; // stylelint-disable-line declaration-no-important
 }
 
 button {
@@ -63,7 +46,12 @@ button {
 }
 
 .visually-hidden {
-  @include visually-hidden;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
 }
 
 .container {
@@ -84,56 +72,62 @@ button {
 
 .title {
   position: relative;
-  margin: 0;
+  display: table;
+  margin: 0 auto;
+  margin-bottom: 100px;
   font: var(--semibold-font);
-  text-align: center;
   text-transform: uppercase;
   color: var(--color-cyprus);
 
-  svg {
+  &::after {
+    content: "";
     position: absolute;
+    right: -45px;
+    top: 25px;
     width: 48px;
-    height: 85px;
+    height: 52px;
+    background: center/cover no-repeat url("../img/slash.svg");
 
     @include tablet {
-      top: 10px;
-      width: 25px;
-      height: 55px;
+      right: -35px;
+      top: 17px;
+      width: 38px;
+      height: 42px;
     }
 
     @include small-tablet {
-      width: 20px;
-      height: 40px;
+      right: -25px;
+      top: 13px;
+      width: 30px;
+      height: 30px;
     }
 
     @include mobile {
-      top: 5px;
-      width: 19px;
-      height: 35px;
+      right: -15px;
+      top: 9px;
+      width: 20px;
+      height: 20px;
     }
   }
 
   @include tablet {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 38px;
   }
 
   @include small-tablet {
-    font-size: 24px;
-    line-height: 28px;
+    margin-bottom: 70px;
+    font-size: 28px;
   }
 
   @include mobile {
+    margin-bottom: 50px;
     font-size: 20px;
-    line-height: 24px;
   }
 }
 
 .btn {
   border: 1px solid var(--color-silver);
-  padding: 25px 10px;
-  width: 350px;
-  font: var(--normal-font);
+  padding: 25px 96px;
   line-height: 18px;
   text-transform: uppercase;
   color: var(--color-main);
@@ -141,13 +135,14 @@ button {
   transition: background-color 0.3s ease-in-out;
 
   @include desktop {
-    &:hover,
-    &:focus {
+    &:focus,
+    &:hover {
       background-color: var(--color-alabaster);
     }
   }
 
   @include mobile {
     width: 100%;
+    font-size: 20px;
   }
 }

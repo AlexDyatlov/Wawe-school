@@ -2,11 +2,14 @@
   padding: 190px 0 199px;
 
   &__title {
-    margin-bottom: 99px;
-
     @include mobile {
-      font-size: 14px;
-      line-height: 18px;
+      max-width: 260px;
+      text-align: center;
+
+      &::after {
+        right: 54px;
+        top: 30px;
+      }
     }
   }
 
@@ -15,6 +18,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 20.14%);
     max-width: 1080px;
+    font: var(--light-font);
     gap: 30px 11.11%;
 
     @include small-tablet {
@@ -23,9 +27,15 @@
     }
   }
 
-  &__text {
-    margin: 0;
-    width: 100%;
-    font: var(--light-font);
+  @include tablet {
+    padding: 140px 0;
+  }
+
+  @include small-tablet {
+    padding: 90px 0;
+  }
+
+  @include mobile {
+    padding: 65px 0;
   }
 }

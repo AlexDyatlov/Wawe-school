@@ -3,6 +3,18 @@
 
   &__title {
     margin-bottom: 220px;
+
+    @include tablet {
+      margin-bottom: 140px;
+    }
+
+    @include small-tablet {
+      margin-bottom: 70px;
+    }
+
+    @include mobile {
+      margin-bottom: 50px;
+    }
   }
 
   &__inner {
@@ -25,6 +37,22 @@
   &__more {
     display: block;
     margin: 0 auto;
+
+    @include mobile {
+      padding: 20px 15px;
+    }
+  }
+
+  @include tablet {
+    padding-bottom: 140px;
+  }
+
+  @include small-tablet {
+    padding-bottom: 90px;
+  }
+
+  @include mobile {
+    padding-bottom: 65px;
   }
 }
 
@@ -39,7 +67,6 @@
   }
 
   &__btn {
-    font: var(--normal-font);
     text-transform: uppercase;
     transition: color 0.3s ease-in-out;
 
@@ -52,6 +79,10 @@
       &:focus {
         color: var(--color-persian);
       }
+    }
+
+    @include mobile {
+      font-size: 18px;
     }
   }
 
